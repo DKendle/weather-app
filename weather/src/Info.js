@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 
 const [pokemon, setPokemon] = useState([])
 
+useEffect(()=> {
+    
+}, [])
 
 function Info(){
 
