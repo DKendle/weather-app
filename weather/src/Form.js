@@ -5,9 +5,11 @@ function Form(){
 
 
     const [input, setInput] = useState([])
+    const [userInput, setUserInput] = useState("")
 
-    const handleSubmit = () => {
-
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setUserInput()
     }
     
     const handleInput = (e) => {
