@@ -1,12 +1,15 @@
 import React from "react";
 import { useEffect, useState } from "react";
-
+import PokemonCard from './PokemonCard'
 
 
 function Info(){
 
     const [pokemon, setPokemon] = useState([])
-    const listedNames = pokemon.map(p => <li>{p.name} - {p.attack}</li>)
+    const [attacks, setAttacks] = useState([])
+    const listedPokes = pokemon.map(p => <li>{p.name}</li>)
+    
+    
     useEffect(()=> {
         fetch("https://pokeapi.co/api/v2/pokemon/")
         .then(response => response.json())
@@ -14,10 +17,13 @@ function Info(){
     }, [])
     
 
+    //<PokemonCard /> Hard codes props for example
+    //change props with state data
     return(
         <div className="poke-list">
             <h1>Pokemon</h1>
-            {listedNames}
+            <PokemonCard name="Pikachu" type="electric" />
+            {listedPokes}
         </div>
     )
 
