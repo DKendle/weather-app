@@ -1,6 +1,5 @@
 import React, { useState} from "react";
 
-
 function Form(){
 
 
@@ -23,6 +22,7 @@ function Form(){
             Enter Pokemon:
             <input onChange={handleInput} type="text" value={input}/>
         </label>
+
         <input type="submit" value="Submit"/>
        </form>
     )

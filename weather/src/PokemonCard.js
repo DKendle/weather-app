@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button} from 'react-bootstrap';
 
 
 const PokemonCard = ({name, type, moves}) => {
@@ -11,7 +12,7 @@ const PokemonCard = ({name, type, moves}) => {
                 <li>Move 2</li>
                 <li>Move 3</li>
                 <li>Move 4</li>
-
+                <Button variant="outline-primary">Like</Button>{' '}
             </ul>
 
 
