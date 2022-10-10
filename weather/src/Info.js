@@ -8,19 +8,24 @@ function Info(){
     const [pokemon, setPokemon] = useState([])
     const [attacks, setAttacks] = useState([])
     const [formInput, setFormInput] = useState([])
+    const [newSearch, setNewSearch] = useState(" ")
 
     //const listedPokes = pokemon.map(p => <li key={p.name}>{p.name}</li>)
     const pokeCards = pokemon.map(p => <PokemonCard name={p.name} />
     )
     const url = "https://pokeapi.co/api/v2/pokemon/"
-        
+    const newUrl = (url + newSearch)
+
+
+//last entered letter not being set in newUrl
     const handleChange = (e) => {
         setFormInput(e.target.value)
+        setNewSearch(formInput)
         console.log("handleChange")
     }
        
     const handleSubmit = (e) => {
-        console.log({formInput})
+        console.log(newUrl)
         e.preventDefault()
     }
  
@@ -31,7 +36,7 @@ function Info(){
     }, [])
     
 
-    
+//????Use Form input to do dynamic searches    
 
     //<PokemonCard /> Hard codes props for example
     //change props with state data
