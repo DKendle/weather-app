@@ -21,7 +21,7 @@ function Form(){
        <form onSubmit={handleSubmit} >
         <label>
             Enter Pokemon:
-            <input onChange={handleChange} type="text" value={input}/>
+            <input onChange={handleChange} type="text" value={input} required/>
         </label>
 
         <input type="submit" value="Submit"/>

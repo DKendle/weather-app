@@ -1,12 +1,13 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const PokemonCard = ({name, type, moves}) => {
     return(
-        <div class="poke-card">
-            <h1>{name}</h1>
-            <p>{type}</p>
+        <div>
+            <Card style={{width: '18rem'}} border="success">
+            <Card.Title>{name}</Card.Title>
+            <Card.Text>{type}</Card.Text>
             <ul>
                 <li>Move 1</li>
                 <li>Move 2</li>
@@ -14,8 +15,7 @@ const PokemonCard = ({name, type, moves}) => {
                 <li>Move 4</li>
                 <Button variant="outline-primary">Like</Button>{' '}
             </ul>
-
-
+            </Card>
         </div>
     )
 }
